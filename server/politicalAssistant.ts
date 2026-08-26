@@ -280,7 +280,7 @@ export async function askPoliticalAssistant(messages: ChatMessage[]): Promise<{ 
     return {
       answer: generatedText,
     };
-    } catch (err: any) {
+  } catch (err: any) {
     console.error('ERRO AO CONECTAR COM GEMINI:', err);
 
     const fallbackAnswer = generateEducationalFallback(questionText);
@@ -292,6 +292,5 @@ export async function askPoliticalAssistant(messages: ChatMessage[]): Promise<{ 
         'Constituição Federal de 1988',
       ],
     };
-  }
   }
 }
