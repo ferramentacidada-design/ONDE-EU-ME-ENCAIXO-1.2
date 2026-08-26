@@ -280,12 +280,18 @@ export async function askPoliticalAssistant(messages: ChatMessage[]): Promise<{ 
     return {
       answer: generatedText,
     };
-  } catch (err: any) {
-    // Graceful fallback to educational content
+    } catch (err: any) {
+    console.error('ERRO AO CONECTAR COM GEMINI:', err);
+
     const fallbackAnswer = generateEducationalFallback(questionText);
+
     return {
       answer: fallbackAnswer,
-      sources: ['Tribunal Superior Eleitoral (TSE) - DivulgaCandContas', 'Constituição Federal de 1988'],
+      sources: [
+        'Tribunal Superior Eleitoral (TSE) - DivulgaCandContas',
+        'Constituição Federal de 1988',
+      ],
     };
+  }
   }
 }
