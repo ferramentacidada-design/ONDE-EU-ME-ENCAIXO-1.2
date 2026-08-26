@@ -1,9 +1,14 @@
 [build]
-  command = "npm run build"
+  command = "bun run build"
   publish = "dist"
   functions = "netlify/functions"
 
 [[redirects]]
   from = "/api/ask-neutral"
+  to = "/.netlify/functions/ask-neutral"
+  status = 200
+
+[[redirects]]
+  from = "/api/assistant/chat"
   to = "/.netlify/functions/ask-neutral"
   status = 200
