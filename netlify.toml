@@ -1,1 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
 
+[[redirects]]
+  from = "/api/ask-neutral"
+  to = "/.netlify/functions/ask-neutral"
+  status = 200
