@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* High contrast mode styles */
+.high-contrast {
+  --tw-bg-opacity: 1;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast * {
+  border-color: #ffffff !important;
+}
+
+.high-contrast button,
+.high-contrast a,
+.high-contrast input,
+.high-contrast select {
+  outline: 2px solid #ffff00 !important;
+}
+
+/* Accessible font scale classes on root container */
+.font-scale-sm {
+  font-size: 15px;
+}
+.font-scale-base {
+  font-size: 16px;
+}
+.font-scale-lg {
+  font-size: 18px;
+}
+.font-scale-xl {
+  font-size: 20px;
+}
+
+/* Focus visibility for accessibility */
+*:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Smooth animations with prefers-reduced-motion check */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

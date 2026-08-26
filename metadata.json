@@ -1,0 +1,6 @@
+{
+  "name": "Onde Eu Me Encaixo?",
+  "description": "Descubra como suas opiniões se posicionam na política brasileira. Ferramenta cívica neutra com questionário sobre o cotidiano, mapa temático em 14 dimensões e consulta a propostas oficiais das Eleições 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
